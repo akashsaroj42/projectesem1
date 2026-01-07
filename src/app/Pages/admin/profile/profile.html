@@ -1,0 +1,76 @@
+
+<div class="profile-container">
+
+<!-- Header -->
+<div class="profile-header">
+  <p class="date">{{ today | date:'EEE, dd MMM yyyy' }}</p>
+
+  <!-- Role Badge -->
+
+<!-- <span class="role-badge" [ngClass]="roleClass">{{ role }}</span> -->
+
+</div>
+
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+
+    <!-- Card Header -->
+    <div class="card-header">
+      <h3>Profile Information</h3>
+      <button class="edit-btn">Edit</button>
+    </div>
+
+    <!-- Basic Info -->
+    <div class="form-grid single">
+      <div class="form-group">
+        <label>ID No.</label>
+        <input class="small-input" type="text" [(ngModel)]="user.id" readonly />
+      </div>
+
+      <div class="form-group">
+        <label>Username</label>
+        <input class="small-input" type="text" [(ngModel)]="user.username" readonly />
+      </div>
+    </div>
+
+   <div class="form-grid">
+
+  <div class="form-group">
+    <label>First Name</label>
+    <input class="medium-input" type="text" [(ngModel)]="user.firstname" />
+  </div>
+
+  <div class="form-group">
+    <label>Last Name</label>
+    <input class="medium-input" type="text" [(ngModel)]="user.lastname" />
+  </div>
+
+  <div class="form-group" >
+    <label>Phone No</label>
+    <input class="medium-input" type="text" [(ngModel)]="user.phone" />
+  </div>
+
+   
+
+
+</div>
+
+
+    <!-- Email Section -->
+    <div class="email-section">
+      <h4>My Email Address</h4>
+
+      <div class="email-row">
+        <span class="email-icon">📧</span>
+        <div>
+          <p>{{ userEmail }}</p>
+          <small>Logged in user</small>
+        </div>
+      </div>
+
+      <button class="add-email">+ Add Email Address</button>
+    </div>
+
+  </div>
+</div>

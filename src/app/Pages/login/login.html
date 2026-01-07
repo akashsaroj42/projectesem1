@@ -1,0 +1,77 @@
+<div class="main-bg">
+
+  <div class="login-card">
+
+    <!-- Register button -->
+    <button class="register-btn" (click)="goToRegister()">Register</button>
+
+    <!-- LEFT SIDE -->
+    <div class="left-side">
+
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-icon"> Welcome to </span>
+        <span class="logo-text">Avishkar</span>
+      </div>
+
+      <h2 class="title">Login to your account</h2>
+
+      <div class="login-with">
+        <button class="admin-btn">Admin/User</button>
+      </div>
+
+      <!-- ✅ FORM START (ONLY INPUT AREA) -->
+      <form (ngSubmit)="formSubmit()" #loginForm="ngForm">
+
+        <!-- Username -->
+        <input
+          [(ngModel)]="loginData.username"
+          name="username"
+          type="text"
+          placeholder="Your Username"
+          class="input-box"
+          required
+        >
+
+        <!-- Password -->
+        <div class="password-box">
+          <input
+            [(ngModel)]="loginData.password"
+            name="password"
+            #passwordInput
+            type="password"
+            placeholder="Password"
+            required
+          >
+          <i class="far fa-eye"
+             (click)="togglePassword(passwordInput)"
+             id="toggleIcon"></i>
+        </div>
+
+        <!-- Forgot password -->
+        <div class="forgot">Forgot password?</div>
+
+        <!-- Login button -->
+        <button type="submit" class="login-btn">Log in</button>
+
+      </form>
+      <!-- ✅ FORM END -->
+
+      <!-- Footer (outside form to avoid layout shift) -->
+      <div class="footer">
+        <span>© Copyright Akash 2026</span>
+        <span>Term & Condition</span>
+        <span>Privacy Policy</span>
+        <span>Help</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (IMAGE KEPT AS-IS) -->
+    <div class="right-side">
+      <img src="assets/login-illustration.png" alt="illustration">
+    </div>
+
+  </div>
+
+</div>

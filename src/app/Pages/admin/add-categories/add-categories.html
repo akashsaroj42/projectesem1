@@ -1,0 +1,34 @@
+<p>add-categories works!</p>
+<div class="add-category-container">
+  <h2>Add New Category</h2>
+
+  <form (ngSubmit)="addCategory()">
+    
+    <div class="form-group">
+      <label>Category Title</label>
+      <input
+        type="text"
+        placeholder="Enter category title"
+        [(ngModel)]="category.title"
+        name="title"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea
+        rows="4"
+        placeholder="Enter category description"
+        [(ngModel)]="category.description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">
+      Save Category
+    </button>
+
+  </form>
+</div>

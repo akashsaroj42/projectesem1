@@ -1,0 +1,61 @@
+/* OUTER BACKGROUND WRAPPER */
+.colour-backaround {
+  background: white;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CONTAINER */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  width: 100%;
+  max-width: 1200px; 
+}
+
+/* LEFT SIDE */
+.left-box {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1f1f6e;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #5b5b8c;
+}
+
+/* BUTTON */
+.cta-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #1f1f6e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #2b2bb8;
+}
+
+/* RIGHT SIDE IMAGE */
+.right-box img {
+  width: 500px;
+  height: auto;
+}

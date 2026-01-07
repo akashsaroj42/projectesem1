@@ -1,0 +1,96 @@
+
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">📘 Avishkar</div>
+
+
+<nav>
+  <a
+    routerLink="/admin-dashboard/onlyadmindashboard"
+    routerLinkActive="active"
+    routerLinkActiveOptions]="{ exact: true }"
+  >
+    Dashboard
+  </a>
+
+  <!-- <a
+    routerLink="/admin-dashboard/profile"
+    routerLinkActive="active"
+  >
+    Profile
+  </a> -->
+
+<a routerLink="/admin-dashboard/catgories" routerLinkActive="active">Categories</a>
+
+
+
+  <a
+    routerLink="/admin-dashboard/quizes"
+    routerLinkActive="active"
+  >
+    View Quizzes
+  </a>
+
+
+  <h4>Other</h4>
+
+  <a
+    routerLink="/admin-dashboard/profile"
+    routerLinkActive="active"
+  >
+    Profile
+  </a>
+
+  <a
+    routerLink="/admin-dashboard/settings"
+    routerLinkActive="active"
+  >
+    Settings
+  </a>
+
+  <a
+    routerLink="/admin-dashboard/help"
+    routerLinkActive="active"
+  >
+    Help
+  </a>
+</nav>
+
+
+
+<header class="sidebar-bottom">
+  <div>
+  <button class="primary-btn" (click)="logout()">
+    Log Out
+  </button></div>
+  
+</header>
+
+    <div class="profile">
+      <strong>@Akash</strong>
+      <span>Teach</span>
+    </div>
+
+
+
+  </aside>
+
+
+
+  <!-- Main Content -->
+  <main class="content">
+    
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <h2>Hello, {{ userName }} 👋</h2>
+      <button class="primary-btn">Create Exam</button>
+    </header>
+    <router-outlet></router-outlet>
+
+    
+  </main>
+</div>
+

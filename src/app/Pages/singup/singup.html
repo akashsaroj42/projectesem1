@@ -1,0 +1,59 @@
+<nav class="navbar">
+  <div class="nav-logo">Avishkar</div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/login">Login</a></li>
+  </ul>
+</nav>
+
+<!-- Purple Background -->
+<div class="page-bg"></div>
+
+<div class="container">
+  <div class="content-wrapper">
+
+    <!-- LEFT = FORM -->
+    <div class="form-box">
+      <h2>Registration Form</h2>
+
+      <form (ngSubmit)="onSubmit()">
+
+        <label>First Name:</label>
+        <input type="text" [(ngModel)]="user.firstname" name="firstname" placeholder="Enter First Name" required>
+
+        <label>Last Name:</label>
+        <input type="text" [(ngModel)]="user.lastname" name="lastname" placeholder="Enter Last Name" required>
+
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="user.email" name="email" placeholder="Enter Email Address" required>
+
+        <label>Username:</label>
+        <input type="text" [(ngModel)]="user.username" name="username" placeholder="Enter Unique Username" required>
+
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter Password" required>
+
+        <label>Contact:</label>
+        <input 
+          type="tel" 
+          [(ngModel)]="user.phone" 
+          name="phone" 
+          placeholder="Enter Phone Number" 
+          required
+          pattern="[0-9]{10,15}"
+        >
+
+        <div class="button-box">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="button" class="submit-btn">Re-Registration</button>
+        </div>
+
+      </form>
+    </div>
+
+    
+
+
+
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="categories-container">
+
+  <!-- Top Header -->
+  <div class="top-bar">
+    <h2>Categories</h2>
+
+    <div class="actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search categories" />
+        <button>
+          🔍
+        </button>
+      </div>
+
+
+ 
+
+      <a routerLink="/admin-dashboard/addCategories" routerLinkActive="active" class="create-btn">
+        + Add Categories
+      </a>
+ 
+    </div>
+  </div>
+
+  <div class="section">
+  <div class="section-header">
+  
+    <a class="view-more">View All →</a>
+  </div>
+
+  <div class="card-grid">
+   <div class="category-card" *ngFor="let cat of categories">
+  <div class="icon">📘</div>
+
+  <h3>{{ cat.title }}</h3>
+
+  <p class="description">
+    {{ cat.description }}
+  </p>
+
+
+    
+    </div>
+  </div>
+</div>
+
+  </div>
+

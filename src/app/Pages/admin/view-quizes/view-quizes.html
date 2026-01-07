@@ -1,0 +1,40 @@
+<div class="quiz-container">
+  <h2>📘 Quizzes</h2>
+
+  <div class="quiz-grid">
+    <div class="quiz-card" *ngFor="let quiz of quizzes">
+
+      <div class="quiz-header">
+        <h3>{{ quiz.title }}</h3>
+        <span class="status" [class.active]="quiz.active === 'true'">
+          {{ quiz.active === 'true' ? 'Active' : 'Inactive' }}
+        </span>
+      </div>
+
+      <p class="category">
+        Category: <strong>{{ quiz.category?.title }}</strong>
+      </p>
+
+      <p class="description" *ngIf="quiz.description; else noDesc">
+        {{ quiz.description }}
+      </p>
+
+      <ng-template #noDesc>
+        <p class="description muted">No description available</p>
+      </ng-template>
+
+      <div class="quiz-info">
+        <div>
+          <span class="label">⭐ Max Marks</span>
+          <span>{{ quiz.maxMarks }}</span>
+        </div>
+
+        <div>
+          <span class="label">Questions</span>
+          <span>{{ quiz.numberOfQuestions }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
